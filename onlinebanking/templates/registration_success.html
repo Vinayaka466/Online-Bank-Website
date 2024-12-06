@@ -1,0 +1,13 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Successful</title>
+</head>
+<body>
+    <h2>Account Created Successfully!</h2>
+    <p>Your Custemr Name  is: {{ account.user }}</p>
+    <p>Your account number is: {{ account_number }}</p>
+    <a href="{% url 'login' %}">Login</a>
+</body>
+</html>

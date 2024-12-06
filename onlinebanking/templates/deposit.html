@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deposit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" style="margin: 7px;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'home' %}">Logout</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav" style="margin: 5px;">
+              <a class="nav-link active" href="{% url 'home'%}">Home</a>
+              <a class="nav-link active" href="#Services">Services</a>
+              <a class="nav-link active" href="{% url 'cantact'%}">Cantact Us</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <div class="shadow-lg p-3 mb-5 bg-white rounded" style="width: 500px; height: 300px; text-align: center;margin: 50px;">
+    <h2 style="color: gray;">Deposit Money</h2>
+    <br>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <button type="submit" class="btn btn-secondary">Deposit</button>
+    </form>
+    </div>
+    <br>
+    <footer id="footer" class="footer dark-background" style="background-color: rgb(26, 25, 25); color: whitesmoke;">
+
+        <div class="container footer-top">
+          <div class="row gy-4">
+            <div class="col-lg-5 col-md-12 footer-about">
+              <a href="index.html" class="logo d-flex align-items-center">
+                <span class="sitename">New Online Bank</span>
+              </a>
+              <p>We are provide the Online accounts and safe transactions and more services</p>
+              <div class="social-links d-flex mt-4">
+                <a href=""><i class="bi bi-twitter-x"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+        </div>
+    
+        <div class="container copyright text-center mt-4">
+          <p>© <span>Copyright</span> <strong class="px-1 sitename">New Online Bank</strong> <span>All Rights Reserved</span></p>
+          <div class="credits">
+            Designed by <a href="https://bootstrapmade.com/">Powered By Vinay</a>
+          </div>
+        </div>
+    
+      </footer>
+</body>
+</html>
